@@ -59,7 +59,7 @@ async def gacha(bot, ev):
     save_user_info()
     await bot.send(ev, MessageSegment.image(img), at_sender=True)
 
-@sv.on_prefix('模拟抽卡记录')
+@sv.on_prefix(('查看模拟抽卡记录','模拟抽卡记录'))
 async def gacharecord(bot, ev):
     uid = ev.user_id
     init_user_info(uid)
